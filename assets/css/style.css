@@ -6,18 +6,22 @@ section {
 section.visual {
   width: 100%;
   position: fixed;
-  /* display: grid;
-  place-content: center; */
+  left: 0;
+  top: 0;
   img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
+}
+section.greeting {
+  /* margin-top: 100vh; */
 }
 
 .container {
-  /* margin-top: 100vh; */
+  margin-top: 100vh;
+  margin-bottom: 100vh;
   position: relative;
   width: 75%;
   margin-inline: auto;
