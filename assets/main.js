@@ -1,26 +1,25 @@
 window.addEventListener("load", () => {});
 
 document.addEventListener("DOMContentLoaded", () => {
-  const target = document.querySelector("section.flyer");
+  const targets = document.querySelectorAll(".parallax");
 
   const observer = new IntersectionObserver(
-    function (entries) {
+    (entries) => {
       entries.forEach(function (entry) {
-        console.log(entry.isIntersecting);
         if (entry.isIntersecting) {
-          entry.target.classList.add("fix");
+          entry.target.classList.add("fade");
         } else {
-          entry.target.classList.remove("fix");
+          entry.target.classList.remove("fade");
         }
-        // observer.unobserve(entry.target);
       });
     },
     {
       root: null,
-      rootMargin: "0px 0px -100%",
+      rootMargin: "-80% 0px -20%",
       threshold: 0,
     }
   );
-
-  observer.observe(target);
+  targets.forEach((target) => {
+    observer.observe(target);
+  });
 });
