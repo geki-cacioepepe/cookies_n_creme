@@ -22,6 +22,7 @@ h2 {
   font-style: normal;
   text-align: center;
   font-size: 24px;
+  margin-bottom: 2em;
 }
 
 div.bg {
@@ -43,7 +44,7 @@ div.bg {
   margin-inline: auto;
   position: relative;
   padding-top: 120vh;
-  padding-bottom: 120vh;
+  /* padding-bottom: 120vh; */
   z-index: 10;
 }
 
@@ -70,6 +71,10 @@ section {
       padding: 20px;
       transition-duration: 3s;
       transition-property: background-color, border-radius;
+      p {
+        font-size: 14px;
+        line-height: 1.7;
+      }
     }
   }
 }
